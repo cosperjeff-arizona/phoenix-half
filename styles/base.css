@@ -1,0 +1,126 @@
+/* base.css — Typography and theme */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Colors — warm dark palette */
+  --color-bg: #1a1918;
+  --color-bg-elevated: #242322;
+  --color-bg-hover: #2d2c2a;
+  --color-surface: #302f2d;
+  
+  --color-text: #e8e6e3;
+  --color-text-secondary: #a8a5a0;
+  --color-text-tertiary: #6b6966;
+  
+  --color-border: #3d3b39;
+  --color-border-subtle: #2d2c2a;
+  
+  /* Semantic colors */
+  --color-physical: #7cb386;
+  --color-physical-muted: rgba(124, 179, 134, 0.15);
+  --color-system: #7ba3c3;
+  --color-system-muted: rgba(123, 163, 195, 0.15);
+  --color-rest: var(--color-text-tertiary);
+  
+  /* Status */
+  --color-complete: #7cb386;
+  --color-skipped: var(--color-text-tertiary);
+  --color-planned: var(--color-text-secondary);
+  
+  /* Typography */
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.0625rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  
+  --leading-tight: 1.25;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+  
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--text-2xl);
+}
+
+h2 {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  font-size: var(--text-xs);
+}
+
+h3 {
+  font-size: var(--text-base);
+  font-weight: 500;
+}
+
+p {
+  color: var(--color-text-secondary);
+}
+
+strong {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--color-surface);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+/* Selection */
+::selection {
+  background: rgba(124, 179, 134, 0.3);
+  color: var(--color-text);
+}

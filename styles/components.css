@@ -1,0 +1,318 @@
+/* components.css — Cards, sessions, and interactive elements */
+
+/* ============================================
+   Day Card
+   ============================================ */
+.day-card {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s ease;
+}
+
+.day-card:hover {
+  border-color: var(--color-border);
+}
+
+/* Highlight today */
+.day-card--today {
+  border-color: var(--color-physical);
+  box-shadow: 0 0 0 1px var(--color-physical);
+}
+
+.day-card__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.day-card__day {
+  font-weight: 500;
+  font-size: var(--text-base);
+  color: var(--color-text);
+}
+
+.day-card__date {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+}
+
+.day-card__sessions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;
+}
+
+/* ============================================
+   Session
+   ============================================ */
+.session {
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  position: relative;
+}
+
+.session--physical {
+  background: var(--color-physical-muted);
+  border-left: 2px solid var(--color-physical);
+}
+
+.session--system {
+  background: var(--color-system-muted);
+  border-left: 2px solid var(--color-system);
+}
+
+.session--rest {
+  background: transparent;
+  border: 1px dashed var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  color: var(--color-text-tertiary);
+  font-size: var(--text-sm);
+}
+
+.session__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.session__type {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.session--physical .session__type {
+  color: var(--color-physical);
+}
+
+.session--system .session__type {
+  color: var(--color-system);
+}
+
+.session__description {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-2);
+}
+
+.session__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+}
+
+.session__duration {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.session__window {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* ============================================
+   Status Badge
+   ============================================ */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.status--planned {
+  background: var(--color-surface);
+  color: var(--color-text-tertiary);
+}
+
+.status--complete {
+  background: var(--color-physical-muted);
+  color: var(--color-physical);
+}
+
+.status--skipped {
+  background: var(--color-surface);
+  color: var(--color-text-tertiary);
+  text-decoration: line-through;
+}
+
+/* ============================================
+   Summary Card
+   ============================================ */
+.summary-card {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.summary-card__title {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.summary-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.summary-card__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: var(--text-sm);
+}
+
+.summary-card__label {
+  color: var(--color-text-tertiary);
+}
+
+.summary-card__value {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.summary-card__note {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border-subtle);
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+}
+
+/* ============================================
+   Rules Block
+   ============================================ */
+.rules {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.rules__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.rules__item {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 480px) {
+  .rules__item {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rules__term {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.rules__definition {
+  color: var(--color-text-tertiary);
+}
+
+/* ============================================
+   Note
+   ============================================ */
+.note {
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+  border-left: 2px solid var(--color-border);
+}
+
+/* ============================================
+   Pill / Tag
+   ============================================ */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  border-radius: 100px;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+}
+
+.pill--physical {
+  background: var(--color-physical-muted);
+  color: var(--color-physical);
+}
+
+.pill--system {
+  background: var(--color-system-muted);
+  color: var(--color-system);
+}
+
+/* ============================================
+   Legend
+   ============================================ */
+.legend {
+  display: flex;
+  gap: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.legend__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.legend__marker {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-sm);
+}
+
+.legend__marker--physical {
+  background: var(--color-physical);
+}
+
+.legend__marker--system {
+  background: var(--color-system);
+}
+
+.legend__label {
+  color: var(--color-text-tertiary);
+}
