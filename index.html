@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phoenix Half Marathon</title>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__title">Phoenix Half Marathon</h1>
+      <p class="header__phase">Week 0 - On-Ramp · 2025-01-20 – 2025-01-26</p>
+    </header>
+
+    <main>
+      <section class="section">
+        <h2 class="section__title">This Week</h2>
+        <div id="week-schedule" class="grid grid--2col">
+          
+          <!-- Monday -->
+          <div class="day-card">
+            <div class="day-card__header">
+              <span class="day-card__day">Monday</span>
+              <span class="day-card__date">2025-01-20</span>
+            </div>
+            <div class="day-card__sessions">
+              <div class="session session--system">
+                <div class="session__type">System</div>
+                <div class="session__description">Review generated files, confirm directory structure, note friction</div>
+                <div class="session__duration">30-45 min · evening-after-bedtime</div>
+              </div>
+            </div>
+            <div class="note">Holiday - family day. System work only if energy permits after bedtime.</div>
+          </div>
+
+          <!-- Tuesday -->
+          <div class="day-card">
+            <div class="day-card__header">
+              <span class="day-card__day">Tuesday</span>
+              <span class="day-card__date">2025-01-21</span>
+            </div>
+            <div class="day-card__sessions">
+              <div class="session session--physical">
+                <div class="session__type">Physical</div>
+                <div class="session__description">Walk outside during lunch. No running required.</div>
+                <div class="session__duration">10-15 min · lunch</div>
+              </div>
+            </div>
+            <div class="note">Office day. Physical session during lunch if possible.</div>
+          </div>
+
+          <!-- Wednesday -->
+          <div class="day-card">
+            <div class="day-card__header">
+              <span class="day-card__day">Wednesday</span>
+              <span class="day-card__date">2025-01-22</span>
+            </div>
+            <div class="day-card__sessions">
+              <div class="session session--physical">
+                <div class="session__type">Physical</div>
+                <div class="session__description">Extra loop at store or walk around parking area</div>
+                <div class="session__duration">10-15 min · grocery-run</div>
+              </div>
+              <div class="session session--system">
+                <div class="session__type">System</div>
+                <div class="session__description">Review data files, make corrections, test HTML rendering</div>
+                <div class="session__duration">30 min · evening-after-bedtime</div>
+              </div>
+            </div>
+            <div class="note">Grocery run is the physical window.</div>
+          </div>
+
+          <!-- Thursday -->
+          <div class="day-card">
+            <div class="day-card__header">
+              <span class="day-card__day">Thursday</span>
+              <span class="day-card__date">2025-01-23</span>
+            </div>
+            <div class="day-card__sessions">
+              <div class="session session--rest">Rest day</div>
+            </div>
+            <div class="note">Rest day. Schedule too constrained. Therapy + swim lessons.</div>
+          </div>
+
+          <!-- Friday -->
+          <div class="day-card">
+            <div class="day-card__header">
+              <span class="day-card__day">Friday</span>
+              <span class="day-card__date">2025-01-24</span>
+            </div>
+            <div class="day-card__sessions">
+              <div class="session session--physical">
+                <div class="session__type">Physical</div>
+                <div class="session__description">Walk or run-walk. Run segments optional (30-60 sec max).</div>
+                <div class="session__duration">15-20 min · afternoon-post-1100</div>
+              </div>
+              <div class="session session--system">
+                <div class="session__type">System</div>
+                <div class="session__description">Document friction, minimal UI refinement, Week 1 planning notes</div>
+                <div class="session__duration">45-60 min · evening-after-bedtime</div>
+              </div>
+            </div>
+            <div class="note">More flexible day. Best physical opportunity of weekdays.</div>
+          </div>
+
+          <!-- Saturday -->
+          <div class="day-card">
+            <div class="day-card__header">
+              <span class="day-card__day">Saturday</span>
+              <span class="day-card__date">2025-01-25</span>
+            </div>
+            <div class="day-card__sessions">
+              <div class="session session--physical">
+                <div class="session__type">Physical</div>
+                <div class="session__description">Walking with family. Brisk pace when possible.</div>
+                <div class="session__duration">15-20 min · family-block</div>
+              </div>
+              <div class="session session--system">
+                <div class="session__type">System (optional)</div>
+                <div class="session__description">Light refinement only. Do not start new work.</div>
+                <div class="session__duration">30 min max · nap-time-or-evening</div>
+              </div>
+            </div>
+            <div class="note">Family priority. Physical integrated with park/activity.</div>
+          </div>
+
+          <!-- Sunday -->
+          <div class="day-card">
+            <div class="day-card__header">
+              <span class="day-card__day">Sunday</span>
+              <span class="day-card__date">2025-01-26</span>
+            </div>
+            <div class="day-card__sessions">
+              <div class="session session--physical">
+                <div class="session__type">Physical</div>
+                <div class="session__description">Family-integrated walk (if Saturday didn't happen)</div>
+                <div class="session__duration">15-20 min · family-block</div>
+              </div>
+              <div class="session session--system">
+                <div class="session__type">System</div>
+                <div class="session__description">Week 0 review, record friction, prepare Week 1 data</div>
+                <div class="session__duration">30 min · evening</div>
+              </div>
+            </div>
+            <div class="note">Week wrap-up. Capture friction data.</div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Week 0 Summary</h2>
+        <div class="grid grid--2col">
+          <div class="day-card">
+            <h3>Physical Target</h3>
+            <p><strong>Minimum:</strong> 2 sessions of any kind</p>
+            <p><strong>Ideal:</strong> 3-4 sessions</p>
+            <p><strong>Maximum:</strong> 4 sessions (do not exceed)</p>
+            <p style="margin-top: var(--space-3); color: var(--color-text-muted); font-size: var(--text-sm);">
+              Walking counts. Period.
+            </p>
+          </div>
+          <div class="day-card">
+            <h3>System Target</h3>
+            <p><strong>Budget:</strong> 2-3 hours total</p>
+            <p><strong>Session cap:</strong> 60 min max</p>
+            <p><strong>Focus:</strong> Clarity, durability, simplicity</p>
+            <p style="margin-top: var(--space-3); color: var(--color-text-muted); font-size: var(--text-sm);">
+              System work is first-class work.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Rules</h2>
+        <div class="day-card">
+          <p><strong>Substitution:</strong> System work may substitute for physical work when energy is low.</p>
+          <p><strong>Priority:</strong> Family and work obligations always override planned sessions.</p>
+          <p><strong>Missed sessions:</strong> Do not reschedule. Absorb and continue.</p>
+          <p><strong>Weekend:</strong> One physical session across Sat/Sun is sufficient.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Phoenix Half Marathon · Week 0 On-Ramp · Data last updated: 2025-01-19</p>
+    </footer>
+  </div>
+</body>
+</html>
