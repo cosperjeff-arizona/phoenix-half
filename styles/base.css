@@ -21,6 +21,8 @@
   --color-physical-muted: rgba(124, 179, 134, 0.15);
   --color-system: #7ba3c3;
   --color-system-muted: rgba(123, 163, 195, 0.15);
+  --color-work: #c9a76c;
+  --color-work-muted: rgba(201, 167, 108, 0.12);
   --color-rest: var(--color-text-tertiary);
   
   /* Status */

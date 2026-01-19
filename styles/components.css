@@ -69,6 +69,11 @@
   border-left: 2px solid var(--color-system);
 }
 
+.session--work {
+  background: var(--color-work-muted);
+  border-left: 2px solid var(--color-work);
+}
+
 .session--rest {
   background: transparent;
   border: 1px dashed var(--color-border);
@@ -101,6 +106,10 @@
 
 .session--system .session__type {
   color: var(--color-system);
+}
+
+.session--work .session__type {
+  color: var(--color-work);
 }
 
 .session__description {
@@ -300,9 +309,10 @@
 }
 
 .legend__marker {
-  width: 12px;
-  height: 12px;
-  border-radius: var(--radius-sm);
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  display: inline-block;
 }
 
 .legend__marker--physical {
@@ -311,6 +321,10 @@
 
 .legend__marker--system {
   background: var(--color-system);
+}
+
+.legend__marker--work {
+  background: var(--color-work);
 }
 
 .legend__label {
